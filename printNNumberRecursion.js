@@ -1,10 +1,10 @@
 function printNNumberRecursion(n) {
-
-    if(n == 0) {
+    if (n < 1) {
         return;
     }
+    printNNumberRecursion(n - 1);
+    
     console.log(n);
-    printNNumberRecursion(n-1);
 }
 
 printNNumberRecursion(5);
