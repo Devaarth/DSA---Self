@@ -3,12 +3,10 @@
  * @return {number}
  */
 var hammingWeight = function(n) {
-     let binaryVal = n.toString(2);
-    let count = 0;
-    let result = [...binaryVal]
-    for(let i=0;i<result.length;i++){
-        if(result[i]=== '1')
-            count++;
+    let count=0;
+    while(n>0){
+        count+=n%2;
+        n = n>>1;
     }
     return count;
 };
