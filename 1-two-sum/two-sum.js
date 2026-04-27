@@ -1,0 +1,16 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    let newMap = new Map();
+    for(let i=0;i<nums.length;i++){
+        let item = target-nums[i];
+        if(newMap.has(item)){  
+                return [newMap.get(item),i]
+        }
+            newMap.set(nums[i],i)
+        }
+      return []  
+    }
